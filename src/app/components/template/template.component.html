@@ -1,0 +1,68 @@
+<!-- navbar -->
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">:Donate</a>
+    <a href="#" data-activates="mobile-drawer-left" class="button-collapse"><i class="material-icons">menu</i></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="">Home</a></li>
+      <li><a href="">Charity</a></li>
+      <li><a href="">Ads For Donate</a></li>
+      <li><a href="">Status and History</a></li>
+      <li><a href="">Settings</a></li>
+    </ul>
+    <a href="#" data-activates="mobile-drawer-right" class="button-collapse-right"><i class="material-icons">person</i></a>
+  </div>
+</nav>
+<!-- side nav left -->
+<ul id="mobile-drawer-left" class="side-nav">
+  <li>
+    <div class="user-view">
+      <a href="#!user"><img class="circle"></a>
+      <a href="#!name"><span class="black-text name">:Donate</span></a>
+    </div>
+  </li>
+  <li><a href="">Home</a></li>
+  <li><a href="">Charity</a></li>
+  <li><a href="">Ads For Donate</a></li>
+  <li><a href="">Status and History</a></li>
+  <li><a href="">Settings</a></li>
+</ul>
+<!-- side nav right -->
+<ul id="mobile-drawer-right" class="side-nav">
+  <li>
+    <div class="user-view">
+      <a href="#!user"><img class="circle"></a>
+      <a href="#!name"><span class="white-text name">:Donate</span></a>
+    </div>
+  </li>
+  <li style="line-height: 0">
+    <div class="row">
+      <form>
+        <div class="input-field col s12">
+          <input style="height: 30px" id="first-name" placeholder="ชื่อ" type="text" class="validate">
+        </div>
+        <div class="input-field col s12">
+          <input style="height: 30px" id="first-name" placeholder="นามสกุล" type="text" class="validate">
+        </div>
+        <div class="input-field col s12">
+          <input style="height: 30px" id="first-name" placeholder="E-mail" type="text" class="validate">
+        </div>
+        <div class="input-field col s12">
+          <input style="height: 30px" id="first-name" placeholder="อายุ" type="text" class="validate">
+        </div>
+        <div class="input-field col s12">
+          <input style="height: 30px" id="first-name" placeholder="เพศ" type="text" class="validate">
+        </div>
+      </form>
+    </div>
+  </li>
+  <li style="line-height: 0">
+    <div class="row">
+      <div class="col s12">
+        <p><strong>ยอดบริจาคปัจจุบัน:</strong><span>&nbsp; {{25000 | currency}}</span></p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
