@@ -1,14 +1,40 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import {
+    HttpClientModule,
+    HTTP_INTERCEPTORS,
+} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { TemplateComponent } from '../components/template/template.component';
+
+// service 
+import { AuthService } from './services/auth.service';
+
+// interceptor 
+import { AuthInterceptor } from './config/auth-interceptor';
 
 @NgModule({
     imports: [
         FormsModule,
-        HttpModule,
-        BrowserAnimationsModule,
+        CommonModule,
+        HttpClientModule,
+        RouterModule,
     ],
-    exports: [],
+    declarations: [TemplateComponent],
+    exports: [
+        // components export
+        TemplateComponent,
+        // modules export
+        HttpClientModule,
+    ],
+    providers: [
+        AuthService,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true,
+        },
+    ]
 })
-export class AppShareModule {}
+export class AppShareModule { }

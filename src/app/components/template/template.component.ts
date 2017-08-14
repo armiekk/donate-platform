@@ -13,14 +13,17 @@ export class TemplateComponent implements OnInit {
 
   ngOnInit() {
     // left drawer
-    $('.button-collapse').sideNav();
+    $('.button-collapse').sideNav({
+      closeOnClick: true,
+      draggable: false,
+    });
 
     // right drawer
     $('.button-collapse-right').sideNav({
       menuWidth: 300,
       edge: 'right',
-      closeOnClick: false,
-      draggable: true,
+      closeOnClick: true,
+      draggable: false,
       onOpen: null,
       onClose: null
     });
